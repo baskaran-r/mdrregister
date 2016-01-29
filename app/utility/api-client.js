@@ -2,17 +2,17 @@ export default {
   MDR_API: './mdrapi/',
 
   session: {
-    path: 'session',
+    path: 'session.json',
     method: 'POST'
   },
 
   doctors: {
-    path: 'doctor',
+    path: 'doctor.json',
     method: 'GET'
   },
 
   clients: {
-    path: 'client',
+    path: 'client.json',
     method: 'GET'
   },
 
@@ -22,12 +22,12 @@ export default {
   },
 
   assessors: {
-    path: 'assessor',
+    path: 'assessor.json',
     method: 'GET'
   },
 
   appointments: {
-    path: 'appointment',
+    path: 'appointment.json',
     method: 'GET'
   },
 

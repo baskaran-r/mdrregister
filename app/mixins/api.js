@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import Api from 'mdrregister/utility/api';
+import ErrorStr from 'mdrregister/utility/error-str';
 
 const {
   Mixin,
@@ -50,6 +51,12 @@ export default Mixin.create({
       settings.url = `${Api.MDR_API}${api.path}`;
       settings.method = api.method || 'GET';
 
+      if (request.path) {
+        _.keys(request.path).forEach((key) => {
+          settings.url = settings.url.replace(`{${key}}`, request.path[key]);
+        });
+      }
+
       if (request.context) {
         settings.context = request.context;
       }
@@ -63,7 +70,15 @@ export default Mixin.create({
       };
 
       Ember.$.ajax(settings).done((...args) => {
-        resolve(...args);
+        const response = args[0];
+        if (response && response.errorCode) {
+          reject({
+            errorCode: response.errorCode,
+            errorMessgae: ErrorStr[response.errorCode] || response.errorDescription
+          }, ...args);
+        } else {
+          resolve(...args);
+        }
       }).fail((...args) => {
         reject(...args);
       }).always(() => {

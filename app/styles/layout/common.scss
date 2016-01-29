@@ -151,6 +151,11 @@ a:hover, a:focus {
   background: #000;
   background-color: rgba(0, 0, 0, 0.1);
   z-index: 100000;
+
+  .loader-spinner {
+    margin-top: 50px;
+    color: #fff;
+  }
 }
 
 .loader-progress-bar {
