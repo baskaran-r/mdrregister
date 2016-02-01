@@ -1,17 +1,21 @@
-<h2>Registration</h2>
 <section class="register-block">
-  <ul class="nav nav-tabs">
-    {{#link-to "register.agent" tagName="li"}}
-      <a href="{{view.href}}">Agent</a>
-    {{/link-to}}
-    {{#link-to "register.doctor" tagName="li"}}
-      <a href="{{view.href}}">Doctor</a>
-    {{/link-to}}
-    {{#link-to "register.assessor" tagName="li"}}
-      <a href="{{view.href}}">Assessor</a>
-    {{/link-to}}
-  </ul>
-  <section class="tabs-container">
-    {{liquid-outlet}}
-  </section>
+  <div class="panel panel-primary">
+    <div class="panel-heading">ENROLLMENT</div>
+    <div class="panel-body">
+      <ul class="nav nav-tabs">
+        {{#link-to "register.agent" tagName="li"}}
+          <a href="{{view.href}}">Agent</a>
+        {{/link-to}}
+        {{#link-to "register.doctor" tagName="li"}}
+          <a href="{{view.href}}">Doctor</a>
+        {{/link-to}}
+        {{#link-to "register.assessor" tagName="li"}}
+          <a href="{{view.href}}">Assessor</a>
+        {{/link-to}}
+      </ul>
+      <section class="tabs-container">
+        {{liquid-outlet}}
+      </section>
+    </div>
+  </div>
 </section>
