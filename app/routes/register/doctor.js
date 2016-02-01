@@ -30,11 +30,7 @@ export default Route.extend(EmberValidator, Api, {
       medicare_number: {
         required: 'Medicare number is required.'
       },
-
-      user_name: {
-        required: 'User name is required.'
-      },
-
+      
       password1: {
         required: 'Password is required.'
       },

@@ -27,10 +27,6 @@ export default Route.extend(EmberValidator, Api, {
         required: 'Rater Id is required.'
       },
 
-      user_name: {
-        required: 'User name is required.'
-      },
-
       password1: {
         required: 'Password is required.'
       },
