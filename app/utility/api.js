@@ -1,5 +1,5 @@
 export default {
-  MDR_API: './mdrapi/',
+  MDR_API: 'http://devapi-mdrealtime.elasticbeanstalk.com/mdrapi/',
 
   adddoctor: {
     path: 'doctor',
