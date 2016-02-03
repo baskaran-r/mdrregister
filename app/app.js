@@ -29,7 +29,18 @@ Route.reopen({
 App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver
+  Resolver,
+
+  init() {
+    this._super(...arguments);
+    window.MDRregister = this;
+  },
+
+  ready() {
+    this.inject('route', 'titlebar', 'service:titlebar');
+    this.inject('route', 'dialog', 'service:dialog');
+    this.inject('service:errorhandler', 'router', 'router:main');
+  }
 });
 
 loadInitializers(App, config.modulePrefix);

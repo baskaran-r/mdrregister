@@ -13,6 +13,9 @@ Router.map(function() {
   });
 
   this.route('confirmation');
+
+  this.route('full-page-error', { path: '/error' })
+  this.route('missing', { path: '/*path' });
 });
 
 export default Router;

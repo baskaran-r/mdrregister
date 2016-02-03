@@ -1,18 +1,38 @@
 export default {
-  MDR_API: 'http://devapi-mdrealtime.elasticbeanstalk.com/mdrapi/',
+  MDR_API: './mdrapi/',
 
-  adddoctor: {
-    path: 'doctor',
+  session: {
+    path: 'session.json',
     method: 'POST'
   },
 
-  adddassessor: {
-    path: 'assessor',
+  doctors: {
+    path: 'doctor.json',
+    method: 'GET'
+  },
+
+  clients: {
+    path: 'client.json',
+    method: 'GET'
+  },
+
+  addclient: {
+    path: 'client',
     method: 'POST'
   },
 
-  addagencystaff: {
-    path: 'agencystaff',
+  assessors: {
+    path: 'assessor.json',
+    method: 'GET'
+  },
+
+  appointments: {
+    path: 'appointment.json',
+    method: 'GET'
+  },
+
+  addappointment: {
+    path: 'appointment',
     method: 'POST'
   }
 };
