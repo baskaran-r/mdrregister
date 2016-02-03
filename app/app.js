@@ -21,7 +21,7 @@ Route.reopen({
     this._super(...arguments);
 
     schedule('afterRender', () => {
-      $('.wrapper-main').css('min-height', $(window).height());
+      Ember.$('.wrapper-main').css('min-height', Ember.$(window).height());
     });
   }
 });
@@ -37,8 +37,6 @@ App = Ember.Application.extend({
   },
 
   ready() {
-    this.inject('route', 'titlebar', 'service:titlebar');
-    this.inject('route', 'dialog', 'service:dialog');
     this.inject('service:errorhandler', 'router', 'router:main');
   }
 });
